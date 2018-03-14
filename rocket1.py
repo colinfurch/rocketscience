@@ -1,5 +1,5 @@
-from ggrocket import Rocket, Plant
+from ggrocket import Rcket, Planet
 
-earth = Plant()
+earth = Planet()
 rocket = Rocket(earth)
 earth.run(rocket)
