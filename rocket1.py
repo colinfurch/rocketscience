@@ -1,5 +1,5 @@
 from ggrocket import Rcket, Planet
 
-earth = Planet()
-rocket = Rocket(earth)
+earth = Planet(viewscale=0.00005)
+rocket = Rocket(earth, altitude=400000, velocity=1000, timezoom=100)
 earth.run(rocket)
