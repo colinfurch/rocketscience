@@ -47,6 +47,17 @@ def StartRocket():
         # Note the starting time
         StartTime = rocket.shiptime
         
+# Function for calculating the total rocket mass, based on burn time and total
+# propellent mass.
+def GetMass():
+    global RocketStarted
+    if RocketStarted:
+        # calculate empty mass plus a fraction of the propellent mass based on time
+        return me + mp*(tburn-BurnTime)/tburn
+    else:
+        # not started: just return the full pre-launch rocket mass
+        return me + mp
+
 # Create a button for starting the simulation
 # Physical positioning at 10,400 pixels, calls the StartRocket function
 start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
