@@ -32,7 +32,7 @@ def GetThrust():
         # get the burn time: seconds since start
         BurnTime = rocket.shiptime - StartTime
         #burnyfunthing
-        print (((180-Burntime)/180)*100)
+        print (((180-BurnTime)/180)*100)
         # is it time to stop the rocket?
         if BurnTime >= tburn:
             # stop the rocket and report zero thrust
