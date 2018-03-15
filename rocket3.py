@@ -29,6 +29,8 @@ def GetThrust():
     global BurnTime
     global RocketStarted
     if RocketStarted:
+        #making a trajectory
+        
         # get the burn time: seconds since start
         BurnTime = rocket.shiptime - StartTime
         #burnyfunthing
@@ -67,6 +69,8 @@ def GetMass():
 # Create a button for starting the simulation
 # Physical positioning at 10,400 pixels, calls the StartRocket function
 start = InputButton((10,400), "START", StartRocket, positioning="physical", size=15)
+
+#function for the trajectory prediction.
 
 #Create and "run" the rocket
 rocket = Rocket(earth, thrust=GetThrust, mass=GetMass)
