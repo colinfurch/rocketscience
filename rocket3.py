@@ -16,6 +16,10 @@ N1D = 9             # Number of rocket engines
 Ftotal = F1D * N1D  # Total thrust (Newtons)
 tburn = 180         # Burn time (seconds)
 
+# fuel gauge for the shiggles
+
+
+
 # Predict the final velocity using Tsiolkovsky's Rocket Equation
 vmaxre = Ftotal*tburn/mp*log((me+mp)/me)
 print("Predicted final velocity (Rocket Equation), vmax: ", vmaxre, " m/s")
@@ -27,6 +31,7 @@ def GetThrust():
     if RocketStarted:
         # get the burn time: seconds since start
         BurnTime = rocket.shiptime - StartTime
+        print(BurnTime)
         # is it time to stop the rocket?
         if BurnTime >= tburn:
             # stop the rocket and report zero thrust
